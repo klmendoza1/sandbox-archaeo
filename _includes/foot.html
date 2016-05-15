@@ -2,15 +2,7 @@
 <script type="text/javascript" src="{{ site.baseurl }}/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="{{ site.baseurl }}/js/jquery.rwdImageMaps.min.js"></script>
 <script type="text/javascript" src="{{ site.baseurl }}/js/jquery.maphilight.min.js"></script>
-<!--script type="text/javascript" src="{{ site.baseurl }}/js/slick.min.js"></script>
-<script type="text/javascript" src="{{ site.baseurl }}/js/smoothscroll.js"></script-->
-
-
-{% if page.animate %}
-<script src="{{ site.baseurl }}/js/wow.min.js"></script>
-<script>new WOW().init();</script>
-{% endif %}
-
+<script type="text/javascript" src="{{ site.baseurl }}/js/slick.min.js"></script>
 
 <script>
 $(document).ready(function(e) {
@@ -31,5 +23,24 @@ $('#exampleModal').on('show.bs.modal', function (event) {
   modal.find('.modal-title').text('New message to ' + recipient)
   modal.find('.modal-body input').val(recipient)
 })
+
+</script>
+
+<script>
+
+  $(document).ready(function(){
+    $('.slick').slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      dots: true,
+      arrows: true,
+      autoplay: true,
+      autoplaySpeed: 5000,
+      infinite: true,
+      speed: 500,
+      fade: true,
+      cssEase: 'linear',
+    });
+  });
 
 </script>
