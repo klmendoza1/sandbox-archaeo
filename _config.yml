@@ -1,0 +1,8 @@
+# Site settings
+title: Mapa ni John
+baseurl: http://toffmendoza.me/sandbox-archaeo
+
+# Build settings
+markdown: kramdown
+permalink: pretty
+# baseurl:
