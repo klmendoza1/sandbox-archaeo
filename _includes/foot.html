@@ -35,17 +35,30 @@ $(document).ready(function(e) {
 
 <script>
 
-$('#exampleModal').on('show.bs.modal', function (event) {
-  var button = $(event.relatedTarget) // Button that triggered the modal
-  var recipient = button.data('whatever') // Extract info from data-* attributes
-  // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
-  // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
-  var modal = $(this)
-  modal.find('.modal-title').text('New message to ' + recipient)
-  modal.find('.modal-body input').val(recipient)
-})
+$(document).on('show.bs.modal', function (event) {
+    if (!event.relatedTarget) {
+        $('.modal').not(event.target).modal('hide');
+    };
+    if ($(event.relatedTarget).parents('.modal').length > 0) {
+        $(event.relatedTarget).parents('.modal').modal('hide');
+    };
+});
+
+$(document).on('shown.bs.modal', function (event) {
+    if ($('body').hasClass('modal-open') == false) {
+        $('body').addClass('modal-open');
+    };
+});
 
 </script>
+
+<style>
+
+.modal-backdrop.fade + .modal-backdrop.fade {
+    transition: opacity 0.40s linear 0s;
+}
+
+</style>
 
 <script>
 
