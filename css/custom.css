@@ -51,6 +51,17 @@
   border-style: none;
 }
 
+.close {
+  opacity: 0.5;
+  color: white;
+}
+
+.close:hover,
+.close:focus {
+  opacity: 0.8;
+  color: white;
+}
+
 .modal-header h2 {
   font-family: Libre Baskerville;
   color: white;
@@ -91,6 +102,12 @@
   color: white;
   border-style: none;
   background-color: #d09357;
+}
+
+.modal-footer button:hover,
+.modal-footer button:focus {
+  color: white;
+  background-color: rgba(208, 147, 87, 0.5);
 }
 
 .nav-pills.nav-pills-artifacts {
