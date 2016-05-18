@@ -1,17 +1,128 @@
-.btn-place {
+@media (min-width: 768px) {
+  .row-eq-height {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display:         flex;
+  }
+}
 
+.col-dark * {
+  color: white;
+}
+
+.col-dark h1 {
+  font-family: Libre Baskerville;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.col-dark p {
+  margin-bottom: 30px;
+}
+
+.btn-place {
+  font-family: Libre Baskerville;
+  font-weight: 900;
+  padding: 0;
+  background-color: transparent;
+  text-decoration: underline;
+  text-transform: uppercase;
+
+}
+
+.btn-place:hover,
+.btn-place:focus {
+  text-transform: uppercase;
 }
 
 .italic {
   font-style: italic;
 }
 
+.modal-content {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+}
+
+.modal-header {
+  border-style: none;
+}
+
+.modal-header h2 {
+  font-family: Libre Baskerville;
+  color: white;
+  text-align: center;
+  margin-top: 4px;
+}
+
+.modal-body h3 {
+  font-family: Libre Baskerville;
+  color: white;
+  margin-bottom: 0;
+}
+
+.modal-body h3+span {
+  color: white;
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+  display: block;
+  border-width: 0 0 1px 0;
+  border-style: solid;
+}
+
+.modal-body p,
+.modal-body ul li {
+  color: white;
+}
+
+.modal-footer {
+  border-style: none;
+  background-color: rgba(255,255,255,0.5);
+  border-radius: 0 0 3px 3px;
+}
+
+.modal-footer button {
+  padding: 4px 8px 3px;
+  font-size: 0.75em;
+  text-transform: uppercase;
+  color: white;
+  border-style: none;
+  background-color: #d09357;
+}
+
+.nav-pills.nav-pills-artifacts {
+  margin: -15px -15px 15px -15px;
+  padding: 15px;
+  background-color: rgba(255,255,255,0.5);
+}
+
+.nav-pills.nav-pills-artifacts>li>a {
+  padding: 4px 8px 3px;
+  font-size: 0.75em;
+  text-transform: uppercase;
+  color: white;
+}
+
+.nav-pills.nav-pills-artifacts>li>a:hover,
+.nav-pills.nav-pills-artifacts>li>a:focus {
+  background-color: rgba(208, 147, 87, 0.5);
+}
+
+.nav-pills.nav-pills-artifacts>li.active>a {
+  background-color: #d09357;
+}
+
+
 .slick-artifact {
-  background-color: black;
+  /*background-color: black;*/
+  /*background-color: white;*/
 }
 
 .slick-slide-artifact {
-  height: 480px;
+  height: 360px;
   width: 100%;
   background-position: center center;
   background-size: contain;
@@ -20,7 +131,7 @@
 
 @media (max-width: 768px) {
   .slick-slide-artifact {
-    height: 320px;
+    height: 240px;
   }
 }
 
@@ -42,8 +153,10 @@
 .slick .slick-prev:before,
 .slick .slick-next:before {
   font-family: HelveticaNeue;
+  /*
   -webkit-filter: invert(85%);
     filter: invert(85%);
+  */
 }
 
 .slick .slick-prev:before {

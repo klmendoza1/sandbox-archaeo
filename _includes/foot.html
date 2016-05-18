@@ -9,6 +9,27 @@ $(document).ready(function(e) {
     $('img[usemap]').rwdImageMaps();
     //$('img[usemap]').mapster();
     $(function() {$('img[usemap]').maphilight({fade: false});});
+
+    $(function() {
+
+        {% for eachplace in page.artifacts %}
+        $('#button-{{ eachplace.id }}').mouseover(function(e) {
+            $('#area-{{ eachplace.id }}').mouseover();
+        }).mouseout(function(e) {
+            $('#area-{{ eachplace.id }}').mouseout();
+        }).click(function(e) { e.preventDefault(); });
+
+        /*
+        $('#area-{{ eachplace.id }}').mouseover(function(e) {
+            $('#button-{{ eachplace.id }}').mouseover();
+        }).mouseout(function(e) {
+            $('#button-{{ eachplace.id }}').mouseout();
+        });
+        */
+        {% endfor %}
+
+    });
+
 });
 </script>
 
